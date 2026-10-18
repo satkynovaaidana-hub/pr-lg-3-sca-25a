@@ -5,20 +5,21 @@ public class Taskn {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
 
-        int z = 0;
-        int p = 0;
-        int n = 0;
+        int zeros = 0;
+        int positives = 0;
+        int negatives = 0;
 
         for (int i = 0; i < n; i++) {
             int num = in.nextInt();
             if (num == 0) {
-                z++;
+                zeros++;
             } else if (num > 0) {
-                p++;
+                positives++;
             } else {
-                n++;
+                negatives++;
             }
         }
-        System.out.print(z + " " + p + " " + n);
+
+        System.out.print(zeros + " " + positives + " " + negatives);
     }
 }
