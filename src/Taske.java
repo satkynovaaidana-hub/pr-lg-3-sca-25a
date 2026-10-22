@@ -3,11 +3,14 @@ import java.util.Scanner;
 public class Taske {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        String x = in.next();
+        int x = in.nextInt();
+
         int sum = 0;
-        for (int i = 0; i < x.length(); i++) {
-            sum += x.charAt(i) - '0';
+        while (x > 0) {
+            sum += x % 10;
+            x /= 10;
         }
+
         System.out.println(sum);
     }
 }
